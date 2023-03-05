@@ -419,3 +419,7 @@ let data = {
     //================================================================
   },
 };
+const savedLanguage = localStorage.getItem('language');
+if (savedLanguage) {
+  changeLanguage(savedLanguage);
+}
