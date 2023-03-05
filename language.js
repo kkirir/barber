@@ -1,24 +1,3 @@
-let showMoreBtn = document.getElementById("products__more");
-
-showMoreBtn.addEventListener("click", () => {
-  let hiddenElements = document.querySelectorAll(".products__content .d-none");
-
-  let commentsList = Array.prototype.slice.call(hiddenElements).slice(0, 3);
-
-  commentsList.forEach((item, index) => {
-    item.className = "products__item item-product d-block";
-    if (index === 0) {
-      item.scrollIntoView({
-        behavior: "smooth",
-      });
-    }
-  });
-
-  if (hiddenElements.length === 0) {
-    showMoreBtn.className = "d-none";
-  }
-});
-
 // переключение языка ==================================================
 let langs = document.querySelector(".header__langs"),
   link = document.querySelectorAll(".header__lang"),
